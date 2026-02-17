@@ -198,7 +198,6 @@ function ChatArea() {
               <p className="text-white font-semibold text-sm">
                 {otherMember?.firstName} {otherMember?.lastName}
               </p>
-              {/* ✅ "Online" / "Offline" status text */}
               <p
                 className={`text-xs font-medium ${isOtherOnline ? "text-green-400" : "text-gray-500"}`}
               >
@@ -229,13 +228,6 @@ function ChatArea() {
                       <p className="text-xs opacity-70">
                         {formatTime(msg.createdAt)}
                       </p>
-                      {isCurrentUser && msg.read && (
-                        <img
-                          src="/images/rr.png"
-                          alt="seen"
-                          className="w-4 h-4 object-contain"
-                        />
-                      )}
                     </div>
                   </div>
                 </div>
