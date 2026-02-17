@@ -4,6 +4,7 @@ import { loginUser } from "./../../apiCalls/auth";
 import { toast } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { hideLoader, showLoader } from "../../redux/loaderSlice";
+import { setUser } from "../../redux/usersSlice";
 
 function Login() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function Login() {
       if (response.success) {
         toast.success(response.message);
         localStorage.setItem("token", response.token);
+        dispatch(setUser(response.data));
         window.location.href = "/";
       } else {
         toast.error(response.message);
