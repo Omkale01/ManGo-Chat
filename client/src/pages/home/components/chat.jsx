@@ -182,7 +182,7 @@ function ChatArea() {
     <>
       {selectedChat && (
         <div className="flex-1 flex flex-col">
-          {/* ✅ Chat header — shows other person's name + online status */}
+          
           <div className="bg-slate-900 border-b border-orange-500/20 px-6 py-3 flex items-center gap-3 flex-shrink-0">
             <div className="relative">
               <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center text-white font-semibold text-sm shadow-lg shadow-orange-500/20">

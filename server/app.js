@@ -23,7 +23,7 @@ app.use("/api/user", userRouter);
 app.use("/api/chat", chatRouter);
 app.use("/api/message", messageRouter);
 
-const distPath = path.join(__dirname, "./client/dist");
+const distPath = path.join(__dirname, "../client/dist");
 app.use(express.static(distPath));
 
 app.use((req, res) => {
