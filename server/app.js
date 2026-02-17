@@ -7,7 +7,12 @@ const chatRouter = require("./controller/chatController");
 const messageRouter = require("./controller/messageController");
 const cors = require("cors");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://mango-chat.onrender.com",
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 const server = require("http").createServer(app);
